@@ -11,6 +11,7 @@ nav{
   padding-top: 0px;
   background: none;
   transition: all 0.6s cubic-bezier(0.7, 0.01, 0.3, 1);
+  font-family: 'Raleway', sans-serif;
 }
 /*Javascript style toggle for menu appear and desappear*/
 .header-in{
@@ -95,8 +96,8 @@ nav.open ul li {
 .logo{
   left:15px;
   top:-4px;
-  width: 90px;
-  height: 80px;
+  width: 100px;
+  height: 90px;
   padding: 0.4% 3%;
   text-align: left;
   background: none;
@@ -117,7 +118,8 @@ nav.solid #logo .logo {
   top:0;
   right:0;
   height: 4px;
-  width: 24px;
+  width: 28px;
+  border-radius: 3px;
   text-align:right;
   margin: 2rem 2rem;
   background: #f7b617;
@@ -138,8 +140,9 @@ nav.solid #logo .logo {
 .menu:before,
 .menu:after{
   content: '';
-  width: 24px;
+  width: 28px;
   height: 4px;
+  border-radius: 3px;ñ
   z-index: -1;
   display: block;
   position: absolute;
@@ -177,7 +180,7 @@ nav.solid #logo .logo {
 /*Parte del mensaje Poderoso :)*/
 #frase{
   background: #000000;
-  height: 500px;
+  height: 300px;
   margin-top:  0;
   left: 0;
   top: 0;
@@ -186,33 +189,35 @@ nav.solid #logo .logo {
 #msg {
   /*display: inline-block;*/
   position: relative;
-  top: 150px;
+  top: 60px;
   left: 0;
   width: 100%;
   height: 300px;
   background: none;
   color: #fff;
-  font-family: monospace;
+  font-family: 'Raleway', sans-serif;
   padding-top: 5em;
   display: flex;
-  justify-content: center;
+  /*justify-content: center;*/
 }
 
 .msg {
   color: #f7b617;
   font-size: 45px;
-  padding-right: 10px;
+  padding-right: 20px;
+  display: inline-block;
 }
 .typewriter h1 {
   overflow: hidden;
   /*justify-content: center;*/
   border-right: .15em solid #f7b617;
+  font-size: 45px;
   white-space: nowrap;
   margin: 3px auto;
   letter-spacing: .12em;
   animation:
-  typing 3.5s steps(40, end),
-  blink-caret .75s step-end infinite;
+  typing 3.5s steps(40, end)infinite alternate,
+  blink-caret .75s step-end infinite alternate;
 }
 
 /*Animacion del demonio*/
@@ -226,16 +231,17 @@ nav.solid #logo .logo {
 }
 /* Configurando a nuestras coders*/
 h2 {
-  font-size: 60px;
+  font-size: 30px;
   color: #616161;
   text-align: center;
-  font-family: 'Love Ya Like A Sister', cursive;
+  font-family: 'Raleway', sans-serif;
 }
-/*section {
-  padding-top: 50px;
+section  .h2{
+  width: 100%;
   padding-bottom: 30px;
   text-align: center;
-}*/
+  padding-top: 50px;
+}
 #promocion{
   padding-top: 50px;
   padding-bottom: 30px;
@@ -246,15 +252,7 @@ h2 {
 #body{
   margin: 0;
 }
-.grid {
-  width: 380px;
-  height: 380px;
-  display: inline-block;
-
-}
-
-.img-box {
-  height: 100%;
+.grid , .img-box{
   width: 380px;
   height: 380px;
   display: inline-block;
@@ -265,6 +263,7 @@ h2 {
   width: 100%;
   height: 100%;
   margin-top: -4px;
+  border-radius: 12px;
   overflow: hidden;
   cursor: pointer;
   display: inline-block;
@@ -277,10 +276,10 @@ h2 {
   opacity: 0;
   width: 100%;
   height: 380px;
-  margin-top: -380px;
+  margin-top: -340px;
   position: absolute;
   overflow: hidden;
-  background-color: rgba(247, 182, 23, 0.57);
+  background-color: rgba(247, 200, 0, 0.1);
   cursor: pointer;
   transition: all 0.5s;
 }
@@ -297,7 +296,7 @@ h2 {
   color: #ffffff;
   font-size: 45px;
   padding-top: 100px;
-  font-family: 'Love Ya Like A Sister', cursive;
+  font-family: 'Raleway', sans-serif, cursive;
 }
 
 .overlay {
@@ -321,4 +320,5 @@ footer{
   padding: 1rem;
   box-sizing: border-box;
   padding-bottom: none;
+  font-family: 'Raleway', sans-serif;
 }

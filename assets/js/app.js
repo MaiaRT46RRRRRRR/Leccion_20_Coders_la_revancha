@@ -19,7 +19,7 @@ window.onload=function(){
 
   	bloq.innerHTML="";
 				
-		for(var i=1 ;i<54;i++){
+		for(var i=0 ;i<coders.length;i++){
 
 			var newDiv =document.createElement('div');
 			newDiv.classList.add("grid");
