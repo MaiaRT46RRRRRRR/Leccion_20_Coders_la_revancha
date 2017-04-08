@@ -1,69 +1,324 @@
+/*Direct style for nav tag*/
+nav{
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  height: 80px;
+  z-index: 1000;
+  margin-top: 0;
+  position: fixed;
+  padding-top: 0px;
+  background: none;
+  transition: all 0.6s cubic-bezier(0.7, 0.01, 0.3, 1);
+}
+/*Javascript style toggle for menu appear and desappear*/
+.header-in{
+  background-color: rgba(247, 182, 23, 0.81);
+}
+#nav-header{
+	
+}
+/**/
+/*Navgation general styles*/
+/*Background Menu*/
+nav .nav-background {
+  top: 0px;
+/*  padding-top:  0.25rem;*/
+  opacity:0;
+  width: 100%;
+  height: 100%;
+  z-index: 1500;
+  display: table;
+  background: none;
+  position: absolute;
+  transition: background-color 0.6s cubic-bezier(0.7, 0.01, 0.3, 1);
+}
+nav.open .nav-background {
+  opacity: 1;
+  background-color: rgba(247, 182, 23, 0.81) !important;
+  transition: background-color 0.6s cubic-bezier(0.7, 0.01, 0.3, 1);
+}
+nav.open {
+  height: 100%;
+  transition: none;
+  -o-transition: none;
+  -moz-transition: none;
+  -webkit-transition: none;
+}
+/*Navigation list*/
+nav ul {
+  top: -10%;
+  padding: 0;
+  opacity: 0;
+  width: 100%;
+  text-align: center;
+  visibility: hidden;
+  display: table-cell;
+  vertical-align: middle;
+  transform: perspective(600px) rotateX(10deg);
+  transition: all 0.5s cubic-bezier(0.7, 0, 0.36, 0.63);
+}
+nav ul li{
+  visibility: hidden;
+}
+nav ul li a{
+  color:white;
+  width: 100%;
+  display: block;
+  padding: 8px 0 0;
+  letter-spacing: -0.06em;
+}
+nav ul li a:hover{
+  color:#f7b617;
+  background-color: white;
+}
+nav.open ul {
+  top: 0;
+  opacity: 1;
+  margin-top: 0;
+  visibility: visible;
+  transform: perspective(600px) rotateX(0deg);
+}
+nav.open ul li {
+  color:#fff;
+  font-size: 60px;
+  visibility: visible !important;
+}
+/*Menu bar logo and menu styles general*/
+/*Logo*/
+.logo,
+.menu{
+  position: absolute;
+  z-index: 2000;
+}
+.logo{
+  left:15px;
+  top:-4px;
+  width: 90px;
+  height: 80px;
+  padding: 0.4% 3%;
+  text-align: left;
+  background: none;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-image: url(../img/icon/laboratoria.svg);
+}
+.open .logo,
+nav.solid #logo .logo {
+  background-image: url(../img/icon/laboratoria.svg);
+}
+.logo img{
+  z-index: 2000;
 
-.coder,  .grid {
-	cursor: pointer;
-	box-sizing: border-box;
-	width: 200px;
-	position: relative; 
-	transition: 2s;
-	background-color : none;
-	overflow: hidden;
-	display: inline-block;
+}
+/*Hamburger*/
+.menu{
+  top:0;
+  right:0;
+  height: 4px;
+  width: 24px;
+  text-align:right;
+  margin: 2rem 2rem;
+  background: #f7b617;
+  transition: all 0.3s;
+}
+.menu:before{
+  top: -8px;
+}
+.menu:after{
+  top: 8px;
+}
+#toggle:hover:before {
+  top: -9px;
+}
+#toggle:hover:after {
+  top: 9px;
+}
+.menu:before,
+.menu:after{
+  content: '';
+  width: 24px;
+  height: 4px;
+  z-index: -1;
+  display: block;
+  position: absolute;
+  background: #f7b617;
+  transition: all 0.3s;
+}
+#toggle:hover {
+  transition: top 0.4s;
+}
+/*Javascript style toggle for menu appear and desappear style background*/
+.solid #toggle .menu {
+  background: #fff;
+}
+.solid #toggle .menu:after{
+  background-color: #fff;
+}
+.solid #toggle .menu:before{
+  background-color: #fff;
+}
+/*Javascript style toggle for menu hamburger appear and desappear*/
+.open .menu {
+  background: none !important;
+}
+.open .menu:after {
+  top: 0 !important;
+  background: #fff !important;
+  transform: rotate(45deg);
+}
+.open .menu:before {
+  top: 0 !important;
+  background: #fff !important;
+  transform: rotate(-45deg);
+}
 
+/*Parte del mensaje Poderoso :)*/
+#frase{
+  background: #000000;
+  height: 500px;
+  margin-top:  0;
+  left: 0;
+  top: 0;
+}
+/*typewriter effect*/
+#msg {
+  /*display: inline-block;*/
+  position: relative;
+  top: 150px;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  background: none;
+  color: #fff;
+  font-family: monospace;
+  padding-top: 5em;
+  display: flex;
+  justify-content: center;
+}
+
+.msg {
+  color: #f7b617;
+  font-size: 45px;
+  padding-right: 10px;
+}
+.typewriter h1 {
+  overflow: hidden;
+  /*justify-content: center;*/
+  border-right: .15em solid #f7b617;
+  white-space: nowrap;
+  margin: 3px auto;
+  letter-spacing: .12em;
+  animation:
+  typing 3.5s steps(40, end),
+  blink-caret .75s step-end infinite;
+}
+
+/*Animacion del demonio*/
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #f7b617; }
+}
+/* Configurando a nuestras coders*/
+h2 {
+  font-size: 60px;
+  color: #616161;
+  text-align: center;
+  font-family: 'Love Ya Like A Sister', cursive;
+}
+/*section {
+  padding-top: 50px;
+  padding-bottom: 30px;
+  text-align: center;
+}*/
+#promocion{
+  padding-top: 50px;
+  padding-bottom: 30px;
+  text-align: center;
+  width: 100%;
+}
+
+#body{
+  margin: 0;
+}
+.grid {
+  width: 380px;
+  height: 380px;
+  display: inline-block;
+
+}
+
+.img-box {
+  height: 100%;
+  width: 380px;
+  height: 380px;
+  display: inline-block;
+  cursor: pointer;
 }
 
 .coder {
-	overflow: hidden;
-	margin: 0px;
-}
-#promocion{
-	margin: 10%;
-}
-
-.img-box{
-	cursor: pointer;
-	width: 200px;
-	height: 200px;	
-	position: relative; 
-	transition: 2s;
+  width: 100%;
+  height: 100%;
+  margin-top: -4px;
+  overflow: hidden;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
 }
 
-.grid {
-	height: 200px;
+.text {
+  display: block;
+  opacity: 0;
+  width: 100%;
+  height: 380px;
+  margin-top: -380px;
+  position: absolute;
+  overflow: hidden;
+  background-color: rgba(247, 182, 23, 0.57);
+  cursor: pointer;
+  transition: all 0.5s;
 }
-
 
 .coder:hover .img-box{
-	transform:scale(1.2);
-	z-index: 2;
-	height: 200px;
+  transform:scale(1.15);
+  z-index: 2;
+  height: 380px;
 
 }
 .coder:hover .text{
-	display: inline-block;
-	z-index: 100;
+  opacity: 1;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 45px;
+  padding-top: 100px;
+  font-family: 'Love Ya Like A Sister', cursive;
 }
 
 .overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: 100;
+  position: absolute;
+  z-index: 100;
+  width: 380px;
+  height: 380px;
+  display: inline-block;
 }
 
 .overlay:hover {
-	background: rgba(249,203,11, 0.5);
+  background: rgba(249,203,11, 0.5);
+  z-index: 10;
 }
 
-.text{
-	display: none;
-	font-size: 20px;
-	color: red;
-	position: absolute;
-	z-index: 5;
-	margin-left: 30px;
-	margin-top: -100px;
-	transition: 3s;
-} 
-
+footer{
+  background-color: #0F110C;
+  height: 80px;
+  text-align: center;
+  color: #fff;
+  padding: 1rem;
+  box-sizing: border-box;
+  padding-bottom: none;
+}
